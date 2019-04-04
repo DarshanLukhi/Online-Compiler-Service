@@ -1,0 +1,7 @@
+D:\WORKSPACE\Project\CompilerService\CompilerWebService\CompilerWebService\bin\Release\CompilerWebService.dll.config
+D:\WORKSPACE\Project\CompilerService\CompilerWebService\CompilerWebService\bin\Release\CompilerWebService.dll
+D:\WORKSPACE\Project\CompilerService\CompilerWebService\CompilerWebService\bin\Release\CompilerWebService.pdb
+D:\WORKSPACE\Project\CompilerService\CompilerWebService\CompilerWebService\obj\Release\CompilerWebService.csprojAssemblyReference.cache
+D:\WORKSPACE\Project\CompilerService\CompilerWebService\CompilerWebService\obj\Release\CompilerWebService.csproj.CoreCompileInputs.cache
+D:\WORKSPACE\Project\CompilerService\CompilerWebService\CompilerWebService\obj\Release\CompilerWebService.dll
+D:\WORKSPACE\Project\CompilerService\CompilerWebService\CompilerWebService\obj\Release\CompilerWebService.pdb
