@@ -9,129 +9,150 @@
 //------------------------------------------------------------------------------
 
 namespace Client.TCP {
-    using System.Runtime.Serialization;
-    using System;
     
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceLibrary1")]
-    [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TCP.ICompilerService")]
+    public interface ICompilerService {
         
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompileCPP", ReplyAction="http://tempuri.org/ICompilerService/CompileCPPResponse")]
+        string CompileCPP(string value);
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompileCPP", ReplyAction="http://tempuri.org/ICompilerService/CompileCPPResponse")]
+        System.Threading.Tasks.Task<string> CompileCPPAsync(string value);
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompileCPPWithInput", ReplyAction="http://tempuri.org/ICompilerService/CompileCPPWithInputResponse")]
+        string CompileCPPWithInput(string code, string input);
         
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompileCPPWithInput", ReplyAction="http://tempuri.org/ICompilerService/CompileCPPWithInputResponse")]
+        System.Threading.Tasks.Task<string> CompileCPPWithInputAsync(string code, string input);
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
-            get {
-                return this.BoolValueField;
-            }
-            set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
-                }
-            }
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompileC", ReplyAction="http://tempuri.org/ICompilerService/CompileCResponse")]
+        string CompileC(string value);
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
-            get {
-                return this.StringValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
-                }
-            }
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompileC", ReplyAction="http://tempuri.org/ICompilerService/CompileCResponse")]
+        System.Threading.Tasks.Task<string> CompileCAsync(string value);
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompileCWithInput", ReplyAction="http://tempuri.org/ICompilerService/CompileCWithInputResponse")]
+        string CompileCWithInput(string code, string input);
         
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompileCWithInput", ReplyAction="http://tempuri.org/ICompilerService/CompileCWithInputResponse")]
+        System.Threading.Tasks.Task<string> CompileCWithInputAsync(string code, string input);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompilePython", ReplyAction="http://tempuri.org/ICompilerService/CompilePythonResponse")]
+        string CompilePython(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompilePython", ReplyAction="http://tempuri.org/ICompilerService/CompilePythonResponse")]
+        System.Threading.Tasks.Task<string> CompilePythonAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompilePythonWithInput", ReplyAction="http://tempuri.org/ICompilerService/CompilePythonWithInputResponse")]
+        string CompilePythonWithInput(string code, string input);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompilePythonWithInput", ReplyAction="http://tempuri.org/ICompilerService/CompilePythonWithInputResponse")]
+        System.Threading.Tasks.Task<string> CompilePythonWithInputAsync(string code, string input);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompileJava", ReplyAction="http://tempuri.org/ICompilerService/CompileJavaResponse")]
+        string CompileJava(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompileJava", ReplyAction="http://tempuri.org/ICompilerService/CompileJavaResponse")]
+        System.Threading.Tasks.Task<string> CompileJavaAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompileJavaWithInput", ReplyAction="http://tempuri.org/ICompilerService/CompileJavaWithInputResponse")]
+        string CompileJavaWithInput(string code, string input);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerService/CompileJavaWithInput", ReplyAction="http://tempuri.org/ICompilerService/CompileJavaWithInputResponse")]
+        System.Threading.Tasks.Task<string> CompileJavaWithInputAsync(string code, string input);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TCP.ICompilerServeice")]
-    public interface ICompilerServeice {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerServeice/GetData", ReplyAction="http://tempuri.org/ICompilerServeice/GetDataResponse")]
-        string GetData(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerServeice/GetData", ReplyAction="http://tempuri.org/ICompilerServeice/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerServeice/GetDataUsingDataContract", ReplyAction="http://tempuri.org/ICompilerServeice/GetDataUsingDataContractResponse")]
-        Client.TCP.CompositeType GetDataUsingDataContract(Client.TCP.CompositeType composite);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompilerServeice/GetDataUsingDataContract", ReplyAction="http://tempuri.org/ICompilerServeice/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<Client.TCP.CompositeType> GetDataUsingDataContractAsync(Client.TCP.CompositeType composite);
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICompilerServeiceChannel : Client.TCP.ICompilerServeice, System.ServiceModel.IClientChannel {
+    public interface ICompilerServiceChannel : Client.TCP.ICompilerService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CompilerServeiceClient : System.ServiceModel.ClientBase<Client.TCP.ICompilerServeice>, Client.TCP.ICompilerServeice {
+    public partial class CompilerServiceClient : System.ServiceModel.ClientBase<Client.TCP.ICompilerService>, Client.TCP.ICompilerService {
         
-        public CompilerServeiceClient() {
+        public CompilerServiceClient() {
         }
         
-        public CompilerServeiceClient(string endpointConfigurationName) : 
+        public CompilerServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public CompilerServeiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public CompilerServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CompilerServeiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CompilerServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CompilerServeiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CompilerServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
+        public string CompileCPP(string value) {
+            return base.Channel.CompileCPP(value);
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
+        public System.Threading.Tasks.Task<string> CompileCPPAsync(string value) {
+            return base.Channel.CompileCPPAsync(value);
         }
         
-        public Client.TCP.CompositeType GetDataUsingDataContract(Client.TCP.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContract(composite);
+        public string CompileCPPWithInput(string code, string input) {
+            return base.Channel.CompileCPPWithInput(code, input);
         }
         
-        public System.Threading.Tasks.Task<Client.TCP.CompositeType> GetDataUsingDataContractAsync(Client.TCP.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContractAsync(composite);
+        public System.Threading.Tasks.Task<string> CompileCPPWithInputAsync(string code, string input) {
+            return base.Channel.CompileCPPWithInputAsync(code, input);
+        }
+        
+        public string CompileC(string value) {
+            return base.Channel.CompileC(value);
+        }
+        
+        public System.Threading.Tasks.Task<string> CompileCAsync(string value) {
+            return base.Channel.CompileCAsync(value);
+        }
+        
+        public string CompileCWithInput(string code, string input) {
+            return base.Channel.CompileCWithInput(code, input);
+        }
+        
+        public System.Threading.Tasks.Task<string> CompileCWithInputAsync(string code, string input) {
+            return base.Channel.CompileCWithInputAsync(code, input);
+        }
+        
+        public string CompilePython(string value) {
+            return base.Channel.CompilePython(value);
+        }
+        
+        public System.Threading.Tasks.Task<string> CompilePythonAsync(string value) {
+            return base.Channel.CompilePythonAsync(value);
+        }
+        
+        public string CompilePythonWithInput(string code, string input) {
+            return base.Channel.CompilePythonWithInput(code, input);
+        }
+        
+        public System.Threading.Tasks.Task<string> CompilePythonWithInputAsync(string code, string input) {
+            return base.Channel.CompilePythonWithInputAsync(code, input);
+        }
+        
+        public string CompileJava(string value) {
+            return base.Channel.CompileJava(value);
+        }
+        
+        public System.Threading.Tasks.Task<string> CompileJavaAsync(string value) {
+            return base.Channel.CompileJavaAsync(value);
+        }
+        
+        public string CompileJavaWithInput(string code, string input) {
+            return base.Channel.CompileJavaWithInput(code, input);
+        }
+        
+        public System.Threading.Tasks.Task<string> CompileJavaWithInputAsync(string code, string input) {
+            return base.Channel.CompileJavaWithInputAsync(code, input);
         }
     }
 }

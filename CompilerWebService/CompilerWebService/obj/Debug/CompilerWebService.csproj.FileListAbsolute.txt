@@ -4,4 +4,3 @@ D:\WORKSPACE\Project\CompilerService\CompilerWebService\CompilerWebService\bin\D
 D:\WORKSPACE\Project\CompilerService\CompilerWebService\CompilerWebService\obj\Debug\CompilerWebService.csproj.CoreCompileInputs.cache
 D:\WORKSPACE\Project\CompilerService\CompilerWebService\CompilerWebService\obj\Debug\CompilerWebService.dll
 D:\WORKSPACE\Project\CompilerService\CompilerWebService\CompilerWebService\obj\Debug\CompilerWebService.pdb
-D:\WORKSPACE\Project\CompilerService\CompilerWebService\CompilerWebService\obj\Debug\CompilerWebService.csprojAssemblyReference.cache

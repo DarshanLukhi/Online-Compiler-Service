@@ -73,17 +73,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\TCP\Client.TCP.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\TCP\service.wsdl" />
     <None Include="Connected Services\TCP\service.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TCP\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\TCP\WcfServiceLibrary1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">

@@ -4,7 +4,6 @@ D:\WORKSPACE\Project\CompilerService\Host\Host\bin\Debug\Host.pdb
 D:\WORKSPACE\Project\CompilerService\Host\Host\bin\Debug\CompilerWebService.dll
 D:\WORKSPACE\Project\CompilerService\Host\Host\bin\Debug\CompilerWebService.pdb
 D:\WORKSPACE\Project\CompilerService\Host\Host\bin\Debug\CompilerWebService.dll.config
-D:\WORKSPACE\Project\CompilerService\Host\Host\obj\Debug\Host.csprojAssemblyReference.cache
 D:\WORKSPACE\Project\CompilerService\Host\Host\obj\Debug\Host.Form1.resources
 D:\WORKSPACE\Project\CompilerService\Host\Host\obj\Debug\Host.Properties.Resources.resources
 D:\WORKSPACE\Project\CompilerService\Host\Host\obj\Debug\Host.csproj.GenerateResource.cache
@@ -12,3 +11,4 @@ D:\WORKSPACE\Project\CompilerService\Host\Host\obj\Debug\Host.csproj.CoreCompile
 D:\WORKSPACE\Project\CompilerService\Host\Host\obj\Debug\Host.csproj.CopyComplete
 D:\WORKSPACE\Project\CompilerService\Host\Host\obj\Debug\Host.exe
 D:\WORKSPACE\Project\CompilerService\Host\Host\obj\Debug\Host.pdb
+D:\WORKSPACE\Project\CompilerService\Host\Host\obj\Debug\Host.csprojAssemblyReference.cache

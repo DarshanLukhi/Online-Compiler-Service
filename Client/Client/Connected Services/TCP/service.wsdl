@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CompilerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsp:Policy wsu:Id="NetTcpBinding_ICompilerServeice_policy">
+  <wsp:Policy wsu:Id="NetTcpBinding_ICompilerService_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
@@ -37,37 +37,96 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfServiceLibrary1" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ICompilerServeice_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
+  <wsdl:message name="ICompilerService_CompileCPP_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompileCPP" />
   </wsdl:message>
-  <wsdl:message name="ICompilerServeice_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  <wsdl:message name="ICompilerService_CompileCPP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompileCPPResponse" />
   </wsdl:message>
-  <wsdl:message name="ICompilerServeice_GetDataUsingDataContract_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  <wsdl:message name="ICompilerService_CompileCPPWithInput_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompileCPPWithInput" />
   </wsdl:message>
-  <wsdl:message name="ICompilerServeice_GetDataUsingDataContract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  <wsdl:message name="ICompilerService_CompileCPPWithInput_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompileCPPWithInputResponse" />
   </wsdl:message>
-  <wsdl:portType name="ICompilerServeice">
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICompilerServeice/GetData" message="tns:ICompilerServeice_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICompilerServeice/GetDataResponse" message="tns:ICompilerServeice_GetData_OutputMessage" />
+  <wsdl:message name="ICompilerService_CompileC_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompileC" />
+  </wsdl:message>
+  <wsdl:message name="ICompilerService_CompileC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompileCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompilerService_CompileCWithInput_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompileCWithInput" />
+  </wsdl:message>
+  <wsdl:message name="ICompilerService_CompileCWithInput_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompileCWithInputResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompilerService_CompilePython_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompilePython" />
+  </wsdl:message>
+  <wsdl:message name="ICompilerService_CompilePython_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompilePythonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompilerService_CompilePythonWithInput_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompilePythonWithInput" />
+  </wsdl:message>
+  <wsdl:message name="ICompilerService_CompilePythonWithInput_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompilePythonWithInputResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompilerService_CompileJava_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompileJava" />
+  </wsdl:message>
+  <wsdl:message name="ICompilerService_CompileJava_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompileJavaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompilerService_CompileJavaWithInput_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompileJavaWithInput" />
+  </wsdl:message>
+  <wsdl:message name="ICompilerService_CompileJavaWithInput_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompileJavaWithInputResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICompilerService">
+    <wsdl:operation name="CompileCPP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompilerService/CompileCPP" message="tns:ICompilerService_CompileCPP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompilerService/CompileCPPResponse" message="tns:ICompilerService_CompileCPP_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICompilerServeice/GetDataUsingDataContract" message="tns:ICompilerServeice_GetDataUsingDataContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICompilerServeice/GetDataUsingDataContractResponse" message="tns:ICompilerServeice_GetDataUsingDataContract_OutputMessage" />
+    <wsdl:operation name="CompileCPPWithInput">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompilerService/CompileCPPWithInput" message="tns:ICompilerService_CompileCPPWithInput_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompilerService/CompileCPPWithInputResponse" message="tns:ICompilerService_CompileCPPWithInput_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompileC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompilerService/CompileC" message="tns:ICompilerService_CompileC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompilerService/CompileCResponse" message="tns:ICompilerService_CompileC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompileCWithInput">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompilerService/CompileCWithInput" message="tns:ICompilerService_CompileCWithInput_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompilerService/CompileCWithInputResponse" message="tns:ICompilerService_CompileCWithInput_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompilePython">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompilerService/CompilePython" message="tns:ICompilerService_CompilePython_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompilerService/CompilePythonResponse" message="tns:ICompilerService_CompilePython_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompilePythonWithInput">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompilerService/CompilePythonWithInput" message="tns:ICompilerService_CompilePythonWithInput_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompilerService/CompilePythonWithInputResponse" message="tns:ICompilerService_CompilePythonWithInput_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompileJava">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompilerService/CompileJava" message="tns:ICompilerService_CompileJava_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompilerService/CompileJavaResponse" message="tns:ICompilerService_CompileJava_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompileJavaWithInput">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompilerService/CompileJavaWithInput" message="tns:ICompilerService_CompileJavaWithInput_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompilerService/CompileJavaWithInputResponse" message="tns:ICompilerService_CompileJavaWithInput_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="NetTcpBinding_ICompilerServeice" type="tns:ICompilerServeice">
-    <wsp:PolicyReference URI="#NetTcpBinding_ICompilerServeice_policy">
+  <wsdl:binding name="NetTcpBinding_ICompilerService" type="tns:ICompilerService">
+    <wsp:PolicyReference URI="#NetTcpBinding_ICompilerService_policy">
     </wsp:PolicyReference>
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
-    <wsdl:operation name="GetData">
-      <soap12:operation soapAction="http://tempuri.org/ICompilerServeice/GetData" style="document" />
+    <wsdl:operation name="CompileCPP">
+      <soap12:operation soapAction="http://tempuri.org/ICompilerService/CompileCPP" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -75,8 +134,62 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap12:operation soapAction="http://tempuri.org/ICompilerServeice/GetDataUsingDataContract" style="document" />
+    <wsdl:operation name="CompileCPPWithInput">
+      <soap12:operation soapAction="http://tempuri.org/ICompilerService/CompileCPPWithInput" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompileC">
+      <soap12:operation soapAction="http://tempuri.org/ICompilerService/CompileC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompileCWithInput">
+      <soap12:operation soapAction="http://tempuri.org/ICompilerService/CompileCWithInput" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompilePython">
+      <soap12:operation soapAction="http://tempuri.org/ICompilerService/CompilePython" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompilePythonWithInput">
+      <soap12:operation soapAction="http://tempuri.org/ICompilerService/CompilePythonWithInput" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompileJava">
+      <soap12:operation soapAction="http://tempuri.org/ICompilerService/CompileJava" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompileJavaWithInput">
+      <soap12:operation soapAction="http://tempuri.org/ICompilerService/CompileJavaWithInput" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -86,7 +199,7 @@
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="CompilerService">
-    <wsdl:port name="NetTcpBinding_ICompilerServeice" binding="tns:NetTcpBinding_ICompilerServeice">
+    <wsdl:port name="NetTcpBinding_ICompilerService" binding="tns:NetTcpBinding_ICompilerService">
       <soap12:address location="net.tcp://localhost:8000/CompilerService" />
       <wsa10:EndpointReference>
         <wsa10:Address>net.tcp://localhost:8000/CompilerService</wsa10:Address>

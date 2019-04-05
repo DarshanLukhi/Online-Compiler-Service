@@ -48,9 +48,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WcfServiceLibrary1">
-      <HintPath>..\..\WcfServiceLibrary\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">

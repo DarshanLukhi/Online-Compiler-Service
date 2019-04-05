@@ -29,6 +29,10 @@ namespace CompilerWebService
         [OperationContract]
         string CompilePythonWithInput(string code, string input);
 
-        // Compiler Service For C++ Language
+        // Compiler Service For Java Language 
+        [OperationContract]
+        string CompileJava(string value);
+        [OperationContract]
+        string CompileJavaWithInput(string code, string input);
     }
 }

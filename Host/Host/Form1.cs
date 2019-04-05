@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ServiceModel;
 using System.ServiceModel.Description;
-using WcfServiceLibrary1;
+using CompilerWebService;
 
 namespace Host
 {
@@ -31,7 +31,7 @@ namespace Host
 
             sh.Description.Behaviors.Add(mBehavior);
             sh.AddServiceEndpoint(typeof(IMetadataExchange), MetadataExchangeBindings.CreateMexTcpBinding(), "mex");
-            sh.AddServiceEndpoint(typeof(ICompilerServeice),tcpb,tcpa);
+            sh.AddServiceEndpoint(typeof(ICompilerService),tcpb,tcpa);
 
             sh.Open();
             label1.Text = "Service Running";
