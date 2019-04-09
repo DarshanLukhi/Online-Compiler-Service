@@ -1,0 +1,49 @@
+
+<div class="container-fluid">
+ 
+ 
+  <div class="row">
+          <div class="col-lg-12">
+
+                 <div class="panel panel-default">
+
+                     <div class="panel-heading" style="padding: 13px 15px 0px 15px;">
+                         <div class="row">
+
+                             <div class="col-md-2 form-group">
+                                 <select class="form-control" (change)="onThemeChange()" [(ngModel)]="theme">
+                                     <option value="ace/theme/clouds" > Clouds</option>
+                                     <option value="ace/theme/dracula">Dracula</option>
+                                     <option value="ace/theme/terminal">Terminal</option>
+                                     <option value="ace/theme/twilight">Twilight</option>
+                                     <option value="ace/theme/xcode">Xcode</option>
+                                     <option value="ace/theme/monokai">Monokai</option>
+                                     <option value="ace/theme/eclipse">Eclipse</option>
+                                     <option value="ace/theme/github">Github</option>
+                                     <option value="ace/theme/gob">Gob</option>
+                                     <option value="ace/theme/cobalt">Cobalt</option>
+                                 </select>
+                             </div>
+                             <div class="col-md-8"></div>
+                             <div class="col-md-2"><button class="btn btn-success pull-right" (click)="onUpdateCode()">
+                                   
+                              <span class="fa fa-cog">&nbsp;</span>
+                              Update </button></div>
+
+      
+                             
+                         </div>
+                     </div>
+   
+                     <div class="panel-body">
+                         <label>CODE</label>
+                             <pre id="editor" style="font-size:16px;height:500px;"></pre>        
+                     </div>
+                    
+                     
+                 </div>
+          </div>
+      </div>
+</div>
+
+

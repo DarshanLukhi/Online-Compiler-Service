@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\CompilerWebService\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Json, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\CompilerWebService\packages\System.Json.4.5.0\lib\netstandard2.0\System.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
@@ -48,7 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\TCP\Reference.cs">
+    <Compile Include="Connected Services\HTTP\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -73,13 +79,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\TCP\service.wsdl" />
-    <None Include="Connected Services\TCP\service.xsd">
+    <None Include="Connected Services\HTTP\CompilerService.wsdl" />
+    <None Include="Connected Services\HTTP\CompilerService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TCP\service1.xsd">
+    <None Include="Connected Services\HTTP\CompilerService1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -91,22 +98,27 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\TCP\" />
+    <WCFMetadataStorage Include="Connected Services\HTTP\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\TCP\configuration91.svcinfo" />
+    <None Include="Connected Services\HTTP\CompilerService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\TCP\configuration.svcinfo" />
+    <None Include="Connected Services\HTTP\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\TCP\Reference.svcmap">
+    <None Include="Connected Services\HTTP\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HTTP\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

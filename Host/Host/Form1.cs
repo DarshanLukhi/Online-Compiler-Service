@@ -23,15 +23,9 @@ namespace Host
         private void Form1_Load(object sender, EventArgs e)
         {
             Uri tcpa = new Uri("net.tcp://localhost:8000/CompilerService");
+            Uri httpa = new Uri("http://localhost:8888/CompilerService");
 
-            sh = new ServiceHost(typeof(CompilerService), tcpa);
-            NetTcpBinding tcpb = new NetTcpBinding();
-
-            ServiceMetadataBehavior mBehavior = new ServiceMetadataBehavior();
-
-            sh.Description.Behaviors.Add(mBehavior);
-            sh.AddServiceEndpoint(typeof(IMetadataExchange), MetadataExchangeBindings.CreateMexTcpBinding(), "mex");
-            sh.AddServiceEndpoint(typeof(ICompilerService),tcpb,tcpa);
+            sh = new ServiceHost(typeof(CompilerService), tcpa, httpa);
 
             sh.Open();
             label1.Text = "Service Running";
