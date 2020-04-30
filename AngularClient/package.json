@@ -21,7 +21,7 @@
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
     "cors": "^2.8.5",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "ngx-pagination": "^3.2.1",
     "ngx-toastr": "^10.0.2",
     "rxjs": "~6.3.3",
